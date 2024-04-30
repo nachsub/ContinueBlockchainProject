@@ -14,7 +14,9 @@ I used continue to understand what a blockchain project would entail and create 
 Also, I used continue to understand specific pieces of code that it generates (like the blockchain mining function). It was useful for debugging specific function calls that didn't contain the correct parameters and refactoring pieces of code in app.js to call existing functions in the src directory instead of redundant functions in app.js. 
 
 ## What I Did Without Continue
-I created the app.js main application logic. Since Continue wasn't using the predefined objects created in the src folder, I spent a lot of time stiching these objects throughout the codebase and utilizing them in the app.js file. I also added validation logic in the validator.js and app.js files to
+I created the app.js main application logic to initialize the blockchain, users, and validators. Since Continue wasn't using the predefined objects created in the src folder, I spent time stiching these objects together throughout the codebase and utilizing them in the app.js file. 
+
+According to SOLID principles, each class has a single responsibility. Thus, I removed redundant functions created in multiple files and localized them to the class which should own that function. I also added validation logic in the validator.js and app.js files to
     1. Ensure that the sender sent the exact amount that the reciever recieved
     2. Ban the validator for 10 blocks if they have three invalid transactions on their record.
 
