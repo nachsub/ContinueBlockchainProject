@@ -1,8 +1,11 @@
 ## Continue Blockchain Project
 Overview: This is a blockchain implementation which contains classes for a Blockchain, 
 Transaction, User, and Validator. The entry point to simulate the blockchain implementation can be run from app.js. 
+
 Blockchain: This class contains a list of blocks, each of which can be identified by a unique hash. Every transaction processed creats a new block. 
+
 Transaction: This class contains the logic to execute a transaction between a sender and recipient. The transaction object will be stored on the blockchain after processing.
+
 Validator: This class contains the validation logic which is used to determine that a transaction is valid (e.g. that a sender has sent the amount intended and that a reciever has recieved the same amount). If a validator has three invalid transactions, they are banned from validation for the next 10 blocks. 
 
 ## Why I Chose This Project
@@ -17,7 +20,9 @@ Also, I used Continue to understand specific pieces of code that it generates (l
 I created the app.js main application logic to initialize the blockchain, users, and validators. Since Continue wasn't using the predefined objects created in the src folder, I spent time replacing the boilerplate code with object calls throughout the codebase, especially in app.js. 
 
 According to SOLID principles, each class has a single responsibility. Thus, I removed redundant functions created in multiple files and localized them to the class which should own that function. I also added validation logic in the validator.js and app.js files to
+
     1. Ensure that the sender sent the exact amount that the reciever recieved
+
     2. Ban the validator for 10 blocks if they have three invalid transactions on their record.
 
 ## What Worked and Didn't Work
